@@ -1,0 +1,37 @@
+ Python的主要特色
+ 1.全功能的程式語言
+ 2.簡單好上手
+ 3.開源程式碼
+ 4.跨平台
+
+ Python可以做什麼?
+ 網頁開發,桌面程式開發,網路遊戲的後台,Machine Learning,爬蟲,Data Science
+
+ Python的廣泛應用
+ YT,Google的搜尋引擎,Microsoft,IBM,Red Hat,IG,Yahoo!,NASA,Dropbox
+
+ Python For建置Python開發環境
+ 1.首先確認電腦是否安裝Python
+ 2.下載Python3以上的版本
+ 3.新增Python環境變數
+ 4.確認Python安裝成功
+
+ 編譯器(compiler)
+ 我們寫的程式語言
+ --(高階語言)人類才看得懂
+ 必須編譯電腦才看得懂的
+ --(低階語言)
+ 執行程式
+
+ 使用編譯器的語言
+ C,C++,C#,Java
+ 
+ 直譯器
+ 高階程式語言一行一行直接轉譯執行
+ 每轉譯一行程式敘述就立刻執行,然後在轉譯下一行,再執行
+ 即時翻譯
+
+ 直譯器的程式語言
+ JavaScript,Ruby,Python,PHP
+
+ 
