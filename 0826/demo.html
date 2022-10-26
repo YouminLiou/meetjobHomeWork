@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+		
+		function showAge() {
+			var age= document.getElementById('age').value;
+			if (age >=18 && age <=30) {
+				alert("符合");
+			}else{
+				alert("不符合")
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+
+
+	<form onsubmit="showAge()">
+		年齡：<input type="text" id="age" name="age" />
+		<br>
+		姓名：<input type="text" id="name" name="username" />
+		<br>
+		<button type="submit">送出123</button>
+	</form>
+
+
+
+</body>
+</html>

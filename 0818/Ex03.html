@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>表單 form</title>
+</head>
+<body>
+
+	<!--
+      action 要將使用者輸入的內容傳送到那一個網頁去
+      action="網頁名稱"
+      method 傳送的方法   post (串流的方法傳送，)   get(使用明碼的方式傳送)
+	-->
+
+    <!--
+         placeholder  提示字元(灰色)
+         required  必填
+    -->
+
+	<form action="" method="post">
+		
+		<input type="text" id="myName" onfocus="borderColor()" onblur="ewitColor()" name="cuname" placeholder="請輸入姓名" required />
+
+		<p></p>
+		<input type="number" name="agr" />
+
+		<p></p>
+		<input type="password" name="password" placeholder="密碼" required />
+
+		<p></p>
+		<input type="email" name="mail" placeholder="請輸入信箱" required />
+
+		<p></p>
+		<input type="submit" value="送出" />
+		<input type="reset" value="取消" />
+		<!--
+			submit  將使用者所填寫的資料 ，依 action 裡面的網頁送過去
+			reset  取消使用者所輸入的內容
+		-->
+
+	</form>
+
+	<script type="text/javascript">
+		// onfocus   當滑鼠點入至 input 輸入框時，生效(會產生一個事件 event)
+        // onblur   當滑鼠點到其他地方時，才生效
+		function borderColor() {
+			document.getElementById("myName").style.border = "5px solid red";
+		}
+		function ewitColor(){
+			document.getElementById("myName").style.border = "1px solid #ccc"
+		}
+	</script>
+
+</body>
+</html>

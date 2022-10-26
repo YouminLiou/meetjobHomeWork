@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<a id="myLink" href="https://tw.yahoo.com/">Yahoo</a>
+
+	<p></p>
+
+	<select id="myName" onchange="showName()">
+		<option value="John">John</option>
+		<option value="Bill">Bill</option>
+		<option value="Mary">Mary</option>
+		<option value="Andy">劉德華</option>
+	</select>
+
+	<script type="text/javascript">
+		var url = document.getElementById("myLink");
+		alert(url.innerHTML + "網址為：\n" + url.href);
+		//innerHTML 抓取內容
+
+		function showName() {
+			var name = document.getElementById("myName").value;
+			alert('Hello' + name);
+		}
+
+
+	</script>
+
+</body>
+</html>

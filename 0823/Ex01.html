@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<button class="click">淡入淡出效果</button>
+	<p class="show1">聯成電腦 meetjob 課程</p>
+	<p class="show2">聯成電腦 meetjob 課程</p>
+	<p class="show3">聯成電腦 meetjob 課程</p>
+	<p class="show4">聯成電腦 meetjob 課程</p>
+
+
+	<script type="text/javascript">
+		
+		$(document).ready(function () {
+
+			// 在jquery 中 抓取html 標籤時 當標籤有 id 時，jquery 會使用 $("#id-name")
+			// 當標籤有 class 時， jquery 會使用 $(".class-name")
+
+
+			$(".click").click(function () {
+				
+			
+				$(".show1").fadeOut();
+				$(".show2").fadeOut('fast');
+				$(".show3").fadeOut('slow');
+				$(".show4").fadeOut(6000);
+
+				// 參數有三個： fast 、 slow 、 毫秒
+				// .fadeToggle()
+			})
+		})
+
+
+
+	</script>
+
+
+
+</body>
+</html>

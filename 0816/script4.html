@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BMI計算</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var height = prompt("請輸入身高cm");
+		var weight = prompt("請輸入體重KG");
+		var sex = prompt("請輸入性別(F/M)");
+
+		sex = sex.toUpperCase();//轉大寫
+
+		// && 且 || 或
+
+		if (sex == "F") {
+			//是女生
+			var bmi = weight / (height/100)**2; // Math.pow(x,2)
+			if (bmi < 18.5) {
+				document.write("你的體重過輕,BMI="+bmi);
+			}else if (bmi >= 18.5 && bmi < 24) {
+				document.write("你的體重太棒了!標準,BMI="+bmi);
+			}else{
+				document.write("你的體重超標了!!,BMI="+bmi);
+			}
+
+
+		}else if (sex == "M") {
+			//是男生
+			var bmi = weight / (height/100)**2;
+			var bmi = weight / (height/100)**2; // Math.pow(x,2)
+			if (bmi < 18.5) {
+				document.write("你的體重過輕,BMI="+bmi);
+			}else if (bmi >= 18.5 && bmi < 24) {
+				document.write("你的體重太棒了!標準,BMI="+bmi);
+			}else{
+				document.write("你的體重超標了!!,BMI="+bmi);
+			}
+
+			
+		}else{
+			document.write("性別有誤");
+		}
+	</script>
+
+</body>
+</html>

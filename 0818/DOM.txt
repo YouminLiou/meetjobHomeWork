@@ -1,0 +1,61 @@
+DOM
+Document Object Model
+
+在DOM底下，html 文件中的所有
+標籤都是一個物件
+
+getElementById
+抓取標籤中的 id 屬性
+
+getElementByClassName
+getElementsByClassName
+
+getElementsByTagName
+抓取html 標籤名稱，img,a
+
+
+
+
+python  for     for i in range(0,4):
+
+
+其他程式的 for  (javascript, java , php , c# , C, C++ , .....)
+
+  for(初始值 ; 布林判斷式 ; 計次值){
+
+  }
+
+  for (var i=1  ; i <= 10  ; i+=2){
+       要執行的程式區段
+
+  }
+
+
+
+  jQuery  ==>  JavaScript 函式庫，幫忙使用者獲得更好的互動經驗
+
+
+  語法結構
+
+  $(document).ready(function(){
+
+  });
+
+  簡化：
+  $(function(){
+
+  });
+
+
+  
+
+
+
+
+
+
+
+
+
+
+

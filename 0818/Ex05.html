@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery範例二</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<button class="click" type="button">切換</button>
+	<p></p>
+	<p class="test">聯成電腦</p>
+
+	<script type="text/javascript">
+		
+		$(function(){
+
+    		 $(".click").click(function(){
+
+    		 	  //$(".test").hide();  //這個會被隱藏
+    		 	  // .show()  顯示
+    		 	  // . toggle()  切換
+
+    		 	  $(".test").toggle();
+
+    		 })
+
+    	});
+	</script>
+
+
+
+</body>
+</html>

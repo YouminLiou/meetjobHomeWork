@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>表單</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<form id="form1" action="order.php" method="post">
+		<!--
+			元素區塊 ，被包起來的視為同一個區塊，這個區塊會有邊框
+		-->
+
+		<fieldset>
+			<legend>帳單資訊</legend>
+			<div>
+				<label for="name">姓名</label>
+				<input type="text" name="name">
+			</div>
+
+			<div>
+				<label for="address">地址</label>
+				<input type="text" name="address">
+			</div>
+
+			<div>
+				<span>付款方式</span>
+				<input type="radio" name="payment" value="creditcard" id="creditcard">
+				<label for="credit">信用卡</label>
+				<input type="radio" name="payment" value="transfer" id="transfer">
+				<label for="transfer">轉帳</label>
+			</div>
+			<div id="credit">
+				<div>
+					<label for="cardNumber">卡號：</label>
+					<input type="text" id="cardNumber">
+				</div>
+				<div>
+					<label for="expiration">有效期限：</label>
+					<input type="text" id="expiration">
+				</div>
+				
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>送貨地址</legend>
+			<div>
+				<input type="checkbox" id="hideShip" checked>
+				<label for="hideShip">同帳單地址</label>
+			</div>
+
+			<div>
+				<label for="shipAddress">地址：</label>
+				<input type="text" id="shipAddress">
+			</div>
+		</fieldset>
+
+	</form>
+
+
+</body>
+</html>

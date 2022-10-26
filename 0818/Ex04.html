@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery範例</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<ul>
+		<li>項目一</li>
+		<li>項目二</li>
+		<li>項目三</li>
+		<li>項目四</li>
+		<li>項目五</li>
+		<li>項目六</li>
+	</ul>
+
+
+	<script type="text/javascript">
+
+		// 頁面載入時，就會跑的
+		$(document).ready(function () {
+			//$("ul li").css("color","green")
+
+			$("ul li").css({"color":"red","font-size":"32px","list-style":"none"});
+
+		})
+	</script>
+
+</body>
+</html>

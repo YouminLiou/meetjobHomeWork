@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<img src="img/01.jpg" alt="智慧小車1">
+	<img src="img/02.jpg" alt="智慧小車2">
+	<img src="img/03.jpg" alt="智慧小車3">
+
+	<script type="text/javascript">
+		var allImg = document.getElementsByTagName('img');
+		var msg = "";
+		//因為很多個。所以會以陣列的方式來存放，陣列的索引是從0
+		for (var i = 0; i < allImg.length; i++) {
+			msg += "第" + (i+1) + "本，書名為：" + allImg[i].alt + "\n";
+		}
+		alert(msg);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<button id="btn">區域收放(折疊)</button>
+	<div id="red" style="width: 100%;height: 100px;background-color: #ff0000;">
+		聯成電腦
+		<br>
+		聯成電腦
+		<br>
+	</div>
+	<p>MeetJob 專班</p>
+
+
+
+	<script type="text/javascript">
+		
+		$(document).ready(function () {
+			$("#btn").click(function () {
+				
+				
+				$("#red").slideToggle();
+				// .slideUp();  // 收起來
+				//  .slideDown() 放下
+				//  .slideToggle();
+				
+			})
+		})
+
+	</script>
+
+
+</body>
+</html>

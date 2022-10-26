@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function display(){
+			document.write("這個是函式");
+		}
+
+		function convertTemp(dc){ //dc是變數名稱
+			return dc * 1.8 + 32; //攝氏轉華氏
+		}
+
+
+	</script>
+
+	<h1>標題</h1>
+	<hr>
+
+	<script type="text/javascript">
+		display();
+
+		var temp = prompt("請輸入攝氏溫度");
+		document.write("轉換後華氏溫度：" + convertTemp(temp));
+	</script>
+
+</body>
+</html>

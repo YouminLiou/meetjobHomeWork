@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		
+		#menu{
+			width: 200px;
+			margin: 5px 0 5px 10px;
+			/*
+		     margin 與 padding　設定方式一樣
+
+		     margin:10px;    四個外邊距都距離 10x
+		     margin:5px 10px 15px 20px ;  上外距5px  右外距 10px  下外距 15px  左外 20px
+		            上   右   下   左
+
+		     margin:10px   20px;   上下外距10px   左右外距 20px
+
+		     margin:10px   5px   20px;    上外距10px   左右外距 5px   下外距 20px
+		   	*/
+
+		}
+		.catalog{
+			background-color: #225588;
+			color: #fff;
+			border-bottom: 1px solid #fff;
+		}
+		.item{
+			background-color: #A8D7E2;
+			margin: 0;
+			padding: 5px 5px 10px 5px;
+			list-style-type: none;
+		}
+		.item li{
+			margin: 0;
+			padding: 1px 0px;
+			display: block;  /* 顯示模式  block　區塊*/
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="menu">
+		<div class="catalog">
+			<h2>程式語言</h2>
+		</div>
+		<ul class="item">
+			<li><a href="#">Python</a></li>
+			<li><a href="#">Java</a></li>
+			<li><a href="#">C#</a></li>
+		</ul>
+
+		<div class="catalog">
+			<h2>設計類</h2>
+		</div>
+		<ul class="item">
+			<li><a href="#">AI</a></li>
+			<li><a href="#">Photoshop</a></li>
+			<li><a href="#">Unity</a></li>
+		</ul>
+
+		<div class="catalog">
+			<h2>資料庫</h2>
+		</div>
+		<ul class="item">
+			<li><a href="#">MYSQL</a></li>
+			<li><a href="#">MYSQL</a></li>
+			<li><a href="#">NO-SQL</a></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function () {
+			
+			// visible 可見 (讓元素顯示出來 ，你會看到 ul 元素)
+			// hidden  不可見
+			//$('.item').hide();
+
+			$(".item").not(":first").hide(); // item 不是第一個的都隱藏
+			$(".item:first").show(); 
+
+			$(".catalog").click(function () {
+				$('.item:visible').slideUp('slow');
+				$(this).next().slideDown('slow');
+			})
+		})
+
+
+	</script>
+
+
+
+</body>
+</html>
