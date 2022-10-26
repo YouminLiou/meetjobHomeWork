@@ -17,18 +17,18 @@
 			<legend>帳單資訊</legend>
 			<div>
 				<label for="name">姓名</label>
-				<input type="text" name="name">
+				<input type="text" id="name">
 			</div>
 
 			<div>
 				<label for="address">地址</label>
-				<input type="text" name="address">
+				<input type="text" id="address">
 			</div>
 
 			<div>
 				<span>付款方式</span>
-				<input type="radio" name="payment" value="creditcard" id="creditcard">
-				<label for="credit">信用卡</label>
+				<input type="radio" name="payment" value="creditcard" id="creditcard" checked>
+				<label for="creditcard">信用卡</label>
 				<input type="radio" name="payment" value="transfer" id="transfer">
 				<label for="transfer">轉帳</label>
 			</div>
@@ -36,6 +36,12 @@
 				<div>
 					<label for="cardNumber">卡號：</label>
 					<input type="text" id="cardNumber">
+
+					<!--
+						 attr('disabled',true)  表示不可以輸入
+						 attr('disabled',false) 表示可以輸入
+					-->
+
 				</div>
 				<div>
 					<label for="expiration">有效期限：</label>
@@ -50,6 +56,11 @@
 			<div>
 				<input type="checkbox" id="hideShip" checked>
 				<label for="hideShip">同帳單地址</label>
+			</div>
+
+			<div>
+				<label for="shipName">姓名：</label>
+				<input type="text" id="shipName">
 			</div>
 
 			<div>
