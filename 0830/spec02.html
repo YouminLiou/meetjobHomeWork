@@ -1,0 +1,150 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>圖片輪播</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var i = 0;
+			var clone = $(".banner .img li").first().clone(); //複製第一張圖片
+			$(".banner .img").append(clone); // 將複製的第一張貼到最後面去
+
+			var size = $(".banner .img li").size(); //抓個數
+
+			/*自動播放*/
+			// setInterval 會不斷的呼叫函數   ，2秒呼叫一次
+			var t = setInterval(function () {
+				i++;
+				move();
+			},2000)
+
+
+			function move() {
+				if ( i == size) {
+					$(".banner .img").css({left:0});
+					i=1
+				} if (i == -1){
+					$(".banner .img").css({left:-(size-1) * 500});
+					i = size - 2;
+				}
+				$(".banner .img").stop().animate({left:-i * 500},500);
+			}
+			/* 動畫 ，往左邊拉-500 px  , 會隨著 i 改變，而越拉越多*/
+
+			/*此區域被滑鼠移入時*/
+			$(".banner").hover(function () {
+				clearInterval(t); // 清除計時器
+			},
+			function () { // 滑鼠移出
+				t = setInterval(function () {
+					i++;
+					move();
+				},2000);
+			});
+
+			$(".banner .left").click(function(){
+	          i++;    // i 每次都加1
+	          move();
+	        });
+
+	        $(".banner .right").click(function(){
+	          i--;  // -- 每次都減1
+	          move();
+	        });	
+		});
+	</script>
+
+	<style type="text/css">
+		
+		/*
+   		* 意思 是說 裡面html 的標籤都適用
+		 */
+
+		*{
+			margin: 0;
+			list-style: none;
+			padding: 0;
+		}
+		.banner{
+			width: 500px;
+			height: 300px;
+			margin: 100px;
+			border: 1px solid #ccc;
+			position: relative; /* 定位屬性*/
+			overflow: hidden; /*超過了就隱藏*/
+		}
+
+		.banner .img{
+			width: 5000px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+
+		.banner .img img{
+			width: 500px;
+			height: 300px;
+			/*圖片的寬高 要跟banner*/
+		}
+		.banner .img li{
+			float: left;
+		}
+
+		.banner .btn{
+			width: 30px;
+			height: 50px;
+			background-color: #ccc;
+
+			/*透明度寫法*/
+			opacity: 0.5;
+			filter: alpha(opacity: 0.5);
+			position: absolute;
+			top: 50%;
+			margin-top: -25px;
+
+			/*字型顏色*/
+			cursor: pointer; /* cursor 是用來改變滑鼠游標的形狀  pointer 手指去點的圖示*/
+			text-align: center;
+			line-height: 50px;
+			font-size: 50px;
+			color: #fff;
+			display: none;
+		}
+
+		.banner .left{
+			left: 0px;
+		}
+		.banner .right{
+			right: 0px;
+		}
+		.banner:hover .btn{
+			display: block;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<div class="banner">
+		
+		<ul class="img">
+			<li><img src="C:\AppServ\www\meetjob\0818\img\01.jpg"></li>
+			<li><img src="C:\AppServ\www\meetjob\0818\img\02.jpg"></li>
+			<li><img src="C:\AppServ\www\meetjob\0818\img\03.jpg"></li>
+			<li><img src="C:\AppServ\www\meetjob\0818\img\01.jpg"></li>
+		</ul>
+
+		<div class="btn left">&lt;</div> <!--&lt; 小於縮寫  &gt; 大於縮寫-->
+		<div class="btn right">&gt;</div>
+
+	</div>
+
+
+
+</body>
+</html>

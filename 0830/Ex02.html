@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>表單</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<form id="form1" action="order.php" method="post">
+		<!--
+			元素區塊 ，被包起來的視為同一個區塊，這個區塊會有邊框
+		-->
+
+		<fieldset>
+			<legend>帳單資訊</legend>
+			<div>
+				<label for="name">姓名</label>
+				<input type="text" id="name">
+			</div>
+
+			<div>
+				<label for="address">地址</label>
+				<input type="text" id="address">
+			</div>
+
+			<div>
+				<span>付款方式</span>
+				<input type="radio" name="payment" value="creditcard" id="creditcard" checked>
+				<label for="creditcard">信用卡</label>
+				<input type="radio" name="payment" value="transfer" id="transfer">
+				<label for="transfer">轉帳</label>
+			</div>
+			<div id="credit">
+				<div>
+					<label for="cardNumber">卡號：</label>
+					<input type="text" id="cardNumber">
+
+					<!--
+						 attr('disabled',true)  表示不可以輸入
+						 attr('disabled',false) 表示可以輸入
+					-->
+
+				</div>
+				<div>
+					<label for="expiration">有效期限：</label>
+					<input type="text" id="expiration">
+				</div>
+				
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>送貨地址</legend>
+			<div>
+				<input type="checkbox" id="hideShip" checked>
+				<label for="hideShip">同帳單地址</label>
+			</div>
+
+			<div id="shipArea">
+				<div>
+					<label for="shipName">姓名：</label>
+					<input type="text" id="shipName">
+				</div>
+
+				<div>
+					<label for="shipAddress">地址：</label>
+					<input type="text" id="shipAddress">
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>年齡</legend>
+			<div>
+				<label for="age">年齡</label>
+				<input type="text" id="age">
+			</div>
+			<div>
+				<button id="btn1">檢查</button>
+			</div>
+		</fieldset>
+
+	</form>
+
+	<script>
+		// 當html 文件被讀入時要做的事情
+		$(document).ready(function(){
+
+			$("#shipArea").hide();
+
+			//年齡檢查區塊
+			$("#btn1").click(function(){
+
+				//要抓 input 欄位的輸入值時，請用 .val()
+				// var  宣告變數用    myAge 變數名稱(可自訂)
+				var myAge = $("#age").val();
+
+				// 判斷要注意！！ 當你的值是數字或是字串時，寫法->雙引號
+				// 抓值進來後，請直覺的判斷它是什麼類型  (整數？ 字串 ？  其他 ？)
+
+				if ( myAge >= 15 && myAge <= 30){
+					alert("年齡符合");
+				}else{
+					alert("年齡不符合");
+				}
+
+			})
+
+
+			// 送貨地址區塊
+
+			$("#hideShip").click(function(){
+
+				if ( $("#hideShip").is(":checked")  ){
+
+						$("#shipArea").hide();
+
+				}else{
+
+						$("#shipArea").show();
+				}
+
+			})
+
+			//付款方式區塊
+
+			// 信用卡被點擊
+			$("#creditcard").click(function(){
+				$("#credit input").attr('disabled',false);
+				//$("#cardNumber").attr('disabled',false);
+			})
+
+			//轉帳被點擊
+			$("#transfer").click(function(){
+				$("#credit input").attr('disabled',true);
+			})
+
+
+
+
+
+
+		});
+	</script>
+
+
+</body>
+</html>
